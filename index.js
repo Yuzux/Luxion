@@ -18,6 +18,8 @@ for(const file of commandFiles) {
 
 client.once('ready', () => {
     console.log('Ready!!');
+    // display status
+    client.user.setActivity('des jeux hentai | /help', { type: 'PLAYING' });
 });
 
 client.on('interactionCreate', async interaction => {
