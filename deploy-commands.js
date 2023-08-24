@@ -16,7 +16,7 @@ const rest = new REST({version: '9'}).setToken(process.env.TOKEN);
 
 (async () => {
     try {
-        await rest.put(Routes.applicationGuildCommands(process.env.CLINETID, process.env.GUILDID), { body: commands });
+        await rest.put(Routes.applicationGuildCommands(process.env.CLIENTID, process.env.GUILDID), { body: commands });
         console.log('Les commandes ont été enregistrées !');
     } catch (error) {
         console.error(error);
