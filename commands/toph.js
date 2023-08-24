@@ -1,6 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { CommandInteraction, MessageEmbed } = require('discord.js');
-
+const fetch = require("node-fetch");
 
 module.exports = {
     data: new SlashCommandBuilder()
