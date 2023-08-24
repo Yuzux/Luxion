@@ -18,7 +18,7 @@
     "mime-types": "^2.1.35",
     "moment": "^2.29.3",
     "nekos.life": "^3.0.0",
-    "node-fetch": "^2.6.7",
+    "node-fetch": "^2.7.0",
     "nsfw-discord": "^7.0.0",
     "random-puppy": "^1.1.0",
     "tr46": "^0.0.3",
