@@ -1,6 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { CommandInteraction, MessageEmbed } = require('discord.js');
-const randomPuppy = require("random-puppy");
+const fetch = require("node-fetch");
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -11,14 +11,13 @@ module.exports = {
      * @param {CommandInteraction} interaction
      */
     async execute(interaction) {
-        const subReddits = ["dankmeme", "meme", "me_irl", "AnimeFunny", "animememes"];
-        const random = subReddits[Math.floor(Math.random() * subReddits.length)];
-        
-        const img = await randomPuppy(random);
+        const url = await fetch("https://www.reddit.com/r/memes/random/.json");
+        const random = await url.json();
 
         const embed = new MessageEmbed()
             .setColor("RANDOM")
-            .setImage(img)
+            .setTitle(`Random Meme | ${random[0].data.children[0].data.title}`)
+            .setImage(random[0].data.children[0].data.url)
         
         interaction.reply({ embeds: [embed] });
     }
