@@ -31,6 +31,7 @@
   "scripts": {
     "start": "node index.js",
     "start:dev": "nodemon index.js",
+    "deploy-commands": "node deploy-commands.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
