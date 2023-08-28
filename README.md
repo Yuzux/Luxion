@@ -1,7 +1,10 @@
 # Luxion - Discord bot
 
-Luxion is a Discord bot made in JS with Discord JS v13
+Luxion is a Discord bot made in JS with Discord JS v13.
 
+This bot allows you to use commands to interact with other discor users on the server.
+This bot also has NSFW commands.
+You are free to add commands or improve it.
 
 ## Install Dependencies
 
