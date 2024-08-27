@@ -47,6 +47,7 @@ module.exports = {
             },
         };
 
+        //add option 3 and 4 if they exist
         if(option3) pollEmbed.description += `\n\n3️⃣ ${option3}`;
         if(option4) pollEmbed.description += `\n\n4️⃣ ${option4}`;
 
